@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+      - "4545:4545"
+      - "9229:9229"
+    environment:
+      DATABASE_URL: postgres://unpossible@postgres/unpossible
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+  postgres:
+    image: postgres:11.5-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: unpossible
+      POSTGRES_DB: unpossible

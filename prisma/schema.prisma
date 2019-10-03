@@ -1,0 +1,94 @@
+generator photon {
+    provider = "photonjs"
+}
+
+generator nexus_prisma {
+    provider = "nexus-prisma"
+}
+
+datasource dev {
+    provider = env("DATABASE_PROVIDER")
+    url      = env("DATABASE_URL")
+}
+
+
+// ====================================================================
+// ===========================  Data Models ===========================
+// ====================================================================
+enum GENDERS {
+    MALE
+    FEMALE
+    OTHER
+}
+
+enum PERMISSIONS {
+    SUPER_ADMIN
+    USER
+    ADMIN
+
+    // TODO: need to adds more permissions
+    LISTEN_BOOK
+    PURCHASE_BOOK
+}
+
+model User {
+    id       String @default(cuid()) @id
+    name     String
+    username String @unique
+    email    String @unique
+
+
+    // Auth info
+    password                     String
+    emailVarificationToken       String?
+    passwordResetToken           String?
+    passwordResetTokenExpiration String?
+    permissions                  PERMISSIONS[]
+
+    // Bios
+    phoneNumber  String?
+    bio          String?
+    gender       GENDERS
+    location     String?
+    profilePhoto String?
+
+    // Timestamp
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+
+model BookAuthor {
+    id        String   @default(cuid()) @id
+    name      String
+    books     Book[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Book {
+    id        String      @default(cuid()) @id
+    title     String
+    author    BookAuthor?
+    createdAt DateTime    @default(now())
+    updatedAt DateTime    @updatedAt
+}
+
+model Category {
+    id        String   @default(cuid()) @id
+    name      String
+    slug      String   @unique
+    offers    Book[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Review {
+    id        String   @default(cuid()) @id
+    body      String
+    rating    Int
+    book      Book?
+    user      User?
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
