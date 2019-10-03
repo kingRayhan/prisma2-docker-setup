@@ -7,7 +7,7 @@ generator nexus_prisma {
 }
 
 datasource dev {
-    provider = env("DATABASE_PROVIDER")
+    provider = "postgresql"
     url      = env("DATABASE_URL")
 }
 

@@ -1,45 +1,44 @@
 {
-    "name": "unpossible-backend",
-    "version": "1.0.0-dev",
-    "description": "unpossible api backend",
-    "main": "index.js",
-    "scripts": {
-        "dev": "ts-node-dev src/index.ts",
-        "dev:backup": "concurrently -k \"npm run build:watch\" \"npm run start:dev\"",
-        "start": "node dist/index.js",
-        "start:dev": "nodemon --inspect=0.0.0.0:9229 dist/index.js",
-        "build": "tsc",
-        "build:watch": "tsc -w",
-        "postinstall": "prisma2 generate"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@gitlab.com/unpossible-book-team/backend.git"
-    },
-    "license": "ISC",
-    "bugs": {
-        "url": "https://gitlab.com/unpossible-book-team/backend/issues"
-    },
-    "homepage": "https://gitlab.com/unpossible-book-team/backend#readme",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "module-alias": "^2.2.2",
-        "prisma2": "^2.0.0-alpha.193",
-        "ts-node-dev": "^1.0.0-pre.43"
-    },
-    "devDependencies": {
-        "@types/body-parser": "^1.17.1",
-        "@types/cors": "^2.8.6",
-        "@types/express": "^4.17.1",
-        "@types/morgan": "^1.7.37",
-        "concurrently": "^4.1.2",
-        "cors": "^2.8.5",
-        "morgan": "^1.9.1",
-        "nodemon": "^1.19.3",
-        "typescript": "^3.6.3"
-    },
-    "_moduleAliases": {
-        "@routes": "src/routes/*"
-    }
+  "name": "unpossible-backend",
+  "version": "1.0.0-dev",
+  "description": "unpossible api backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "dev:backup": "concurrently -k \"npm run build:watch\" \"npm run start:dev\"",
+    "start": "node dist/index.js",
+    "start:dev": "nodemon --inspect=0.0.0.0:9229 dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/unpossible-book-team/backend.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/unpossible-book-team/backend/issues"
+  },
+  "homepage": "https://gitlab.com/unpossible-book-team/backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "prisma2": "^2.0.0-alpha.193",
+    "ts-node-dev": "^1.0.0-pre.43"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.1",
+    "@types/morgan": "^1.7.37",
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.3",
+    "typescript": "^3.6.3"
+  },
+  "_moduleAliases": {
+    "@routes": "src/routes/*"
+  }
 }
