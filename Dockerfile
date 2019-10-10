@@ -1,18 +1,16 @@
-FROM node:alpine
+FROM node:10
 
-RUN sed -i 's=/v3.*/=/v3.10/=g' /etc/apk/repositories
-RUN apk -U upgrade
+RUN apt-get update && apt-get install -y build-essential && apt-get install -y python
 
-ADD ./ /usr/src/app
 WORKDIR /usr/src/app
-USER root
+
 # RUN apk add --update libc6-compat
+COPY ./package.json ./
+COPY ./yarn.lock ./
+COPY ./prisma ./
+RUN yarn 
+
 COPY . .
-RUN rm -rf node_modules \
-    && yarn 
 
-RUN npm run build
-
-EXPOSE 3000 9229 4545 5433
 # CMD ./scripts/start.sh
 CMD ["yarn", "dev"]
