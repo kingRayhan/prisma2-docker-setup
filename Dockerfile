@@ -1,22 +1,16 @@
-FROM node:12.4.0
-EXPOSE 3000 9229 4545
+FROM node:10
+
+RUN apt-get update && apt-get install -y build-essential && apt-get install -y python
+
 WORKDIR /usr/src/app
-RUN echo $DATABASE_URL
 
-RUN rm -rf node_modules \
-    && npm i -g --unsafe-perm prisma2@2.0.0-alpha.193  \
-    && npm install \
-    && chown -R node /usr/src/app
-
-RUN prisma2 generate
-
-COPY package.json .
-COPY package-lock.json .
-
+# RUN apk add --update libc6-compat
+COPY ./package.json ./
+COPY ./yarn.lock ./
+COPY ./prisma ./
+RUN yarn 
 
 COPY . .
 
-RUN npm run build
-
 # CMD ./scripts/start.sh
-CMD ["npm", "run", "dev"]
+CMD ["yarn", "dev"]
