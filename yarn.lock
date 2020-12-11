@@ -948,8 +948,8 @@ inherits@2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
 ini@^1.3.4, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
 
 invert-kv@^2.0.0:
   version "2.0.0"
@@ -1712,9 +1712,9 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
-prisma2@^2.0.0-alpha.193:
-  version "2.0.0-preview-13"
-  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview-13.tgz#e44ec706e7c2765c04c478cf41b529fd05bef6b1"
+prisma2@^2.0.0-preview013.3:
+  version "2.0.0-preview025"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview025.tgz#09b5d97b209484c1afe7b0b4ba64bb3930d96701"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
