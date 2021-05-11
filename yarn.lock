@@ -879,8 +879,8 @@ has-values@^1.0.0:
     kind-of "^4.0.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.4.tgz#44119abaf4bc64692a16ace34700fed9c03e2546"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 http-errors@1.7.2:
   version "1.7.2"
@@ -1712,9 +1712,9 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
-prisma2@^2.0.0-alpha.193:
-  version "2.0.0-preview-13"
-  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview-13.tgz#e44ec706e7c2765c04c478cf41b529fd05bef6b1"
+prisma2@^2.0.0-preview013.3:
+  version "2.0.0-preview025"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview025.tgz#09b5d97b209484c1afe7b0b4ba64bb3930d96701"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
