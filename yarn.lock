@@ -490,8 +490,8 @@ decamelize@^1.1.2, decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 deep-extend@^0.6.0:
   version "0.6.0"
@@ -1712,9 +1712,9 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
 
-prisma2@^2.0.0-alpha.193:
-  version "2.0.0-preview-13"
-  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview-13.tgz#e44ec706e7c2765c04c478cf41b529fd05bef6b1"
+prisma2@^2.0.0-preview013.3:
+  version "2.0.0-preview025"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview025.tgz#09b5d97b209484c1afe7b0b4ba64bb3930d96701"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
